@@ -1,0 +1,727 @@
+.logo-icon1 {
+  height: 24px;
+  width: 24px;
+  position: relative;
+  object-fit: cover;
+  min-height: 24px;
+}
+.label2 {
+  position: relative;
+  letter-spacing: 1px;
+  line-height: 18px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.label-container {
+  flex-direction: column;
+  padding: var(--padding-10xs) 0 0;
+}
+.frame-wrapper10,
+.label-container,
+.logo-parent {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.logo-parent {
+  flex: 1;
+  flex-direction: row;
+  gap: var(--gap-xs);
+}
+.frame-wrapper10 {
+  height: 36px;
+  flex-direction: column;
+  padding: var(--padding-xs) 0 0;
+  box-sizing: border-box;
+}
+.icon4 {
+  height: 48px;
+  width: 48px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.frame-header,
+.mobile-registration-inner {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  max-width: 100%;
+}
+.frame-header {
+  flex: 1;
+  justify-content: space-between;
+  gap: var(--gap-xl);
+  text-align: left;
+  font-size: var(--font-size-base);
+  color: var(--color-gray-100);
+  font-family: var(--font-raleway);
+}
+.mobile-registration-inner {
+  height: 72px;
+  justify-content: flex-start;
+  padding: 0 0 var(--padding-5xl) var(--padding-sm);
+  box-sizing: border-box;
+}
+.active-indicator1 {
+  height: 12px;
+  width: 12px;
+  position: relative;
+  border-radius: 50%;
+  background-color: var(--color-royalblue);
+}
+.active-line {
+  width: 40px;
+  height: 1px;
+  position: relative;
+  border-top: 1px solid var(--color-royalblue);
+  box-sizing: border-box;
+}
+.active-line-wrapper {
+  height: 6px;
+  width: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-7xs) 0 0;
+  box-sizing: border-box;
+}
+.active-indicator2 {
+  height: 12px;
+  width: 12px;
+  position: relative;
+  border-radius: 50%;
+  background-color: var(--color-royalblue);
+}
+.default-line2 {
+  width: 40px;
+  height: 1px;
+  position: relative;
+  border-top: 1px solid var(--color-silver-200);
+  box-sizing: border-box;
+}
+.default-line-wrapper {
+  height: 6px;
+  width: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-7xs) 0 0;
+  box-sizing: border-box;
+}
+.default-indicator4 {
+  height: 12px;
+  width: 12px;
+  position: relative;
+  border-radius: 50%;
+  background-color: var(--color-white);
+  border: 0 solid var(--color-silver-200);
+  box-sizing: border-box;
+}
+.progress-bar-wrapper,
+.progress-bar2 {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+.progress-bar2 {
+  justify-content: flex-start;
+  padding: 0 var(--padding-5xl);
+  gap: var(--gap-5xs);
+}
+.progress-bar-wrapper {
+  justify-content: flex-end;
+  padding: 0 var(--padding-46xl) var(--padding-xl) 79px;
+}
+.body-text1,
+.large-title1 {
+  align-self: stretch;
+  position: relative;
+}
+.large-title1 {
+  margin: 0;
+  font-size: inherit;
+  line-height: 36px;
+  font-weight: 700;
+  font-family: inherit;
+}
+.body-text1 {
+  font-size: var(--font-size-base);
+  line-height: 22px;
+  font-family: var(--font-roboto);
+  color: var(--color-dimgray);
+}
+.frame-wrapper11,
+.large-title-group {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  max-width: 100%;
+}
+.large-title-group {
+  flex: 1;
+  flex-direction: column;
+  gap: var(--gap-base);
+}
+.frame-wrapper11 {
+  align-self: stretch;
+  flex-direction: row;
+  padding: 0 0 var(--padding-9xs) var(--padding-sm);
+  box-sizing: border-box;
+  text-align: center;
+  font-size: var(--font-size-13xl);
+}
+.select {
+  height: 28px;
+  width: 28px;
+  border-radius: var(--br-31xl);
+  background-color: var(--color-gainsboro);
+  border: 1px solid var(--color-silver-100);
+  box-sizing: border-box;
+}
+.mann-milaap-digital {
+  margin: 0;
+}
+.mann-milaap-digital-container {
+  height: 48px;
+  flex: 1;
+  position: relative;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+}
+.select-parent {
+  width: 317.5px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-4xs-5);
+}
+.icons {
+  width: 20px;
+  height: 20px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.select1 {
+  height: 28px;
+  width: 28px;
+  border-radius: var(--br-31xl);
+  background-color: var(--feedback-sucess-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--padding-5xs) var(--padding-9xs);
+  box-sizing: border-box;
+}
+.mann-milaap-apple {
+  margin: 0;
+}
+.mann-milaap-apple-container {
+  align-self: stretch;
+  height: 48px;
+  position: relative;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+}
+.mann-milaap-apple-group-wrapper,
+.select-group {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.mann-milaap-apple-group-wrapper {
+  flex: 1;
+  flex-direction: column;
+  padding: var(--padding-9xs) 0 0;
+}
+.select-group {
+  width: 317.5px;
+  flex-direction: row;
+  padding: 0 0 var(--padding-9xs);
+  box-sizing: border-box;
+  gap: var(--gap-4xs-5);
+}
+.mann-milaap-deravasi {
+  margin: 0;
+}
+.mann-milaap-deravasi-container {
+  height: 48px;
+  flex: 1;
+  position: relative;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+}
+.mann-milaap-deravasi-group-wrapper {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0 var(--padding-3xl) var(--padding-9xs) var(--padding-17xl-5);
+}
+.patanghad-group1 {
+  margin: 0;
+}
+.patanghad-group {
+  height: 48px;
+  flex: 1;
+  position: relative;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+}
+.patanghad-group-wrapper {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0 var(--padding-3xl) var(--padding-9xs) var(--padding-17xl-5);
+}
+.only-sthanakwasi-group {
+  margin: 0;
+}
+.only-sthanakwasi-group-container {
+  height: 48px;
+  flex: 1;
+  position: relative;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+}
+.only-sthanakwasi-group-1-wrapper {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0 var(--padding-3xl) var(--padding-9xs) var(--padding-17xl-5);
+}
+.only-sthanakwasi-group1 {
+  margin: 0;
+}
+.only-sthanakwasi-group-container1 {
+  height: 48px;
+  flex: 1;
+  position: relative;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+}
+.only-sthanakwasi-group-2-wrapper {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0 var(--padding-3xl) var(--padding-9xs) var(--padding-17xl-5);
+}
+.only-canada-group {
+  margin: 0;
+}
+.only-canada-group-container {
+  height: 48px;
+  flex: 1;
+  position: relative;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+}
+.only-canada-group-wrapper {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0 var(--padding-3xl) var(--padding-9xs) var(--padding-17xl-5);
+}
+.h1b-visa-group {
+  flex: 1;
+  position: relative;
+  line-height: 24px;
+}
+.h1b-visa-group-wrapper {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0 var(--padding-3xl) var(--padding-9xs) var(--padding-17xl-5);
+}
+.nri-group-citizenship {
+  flex: 1;
+  position: relative;
+  line-height: 24px;
+}
+.nri-group-citizenship-and-gre-wrapper {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0 var(--padding-3xl) var(--padding-9xs) var(--padding-17xl-5);
+}
+.far-east-group {
+  margin: 0;
+}
+.far-east-group-container {
+  height: 48px;
+  flex: 1;
+  position: relative;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+}
+.far-east-group-wrapper,
+.frame-parent8 {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0 var(--padding-3xl) 0 var(--padding-17xl-5);
+}
+.frame-parent8 {
+  flex-direction: column;
+  padding: 0 var(--padding-base) 0 0;
+  box-sizing: border-box;
+  gap: 28px;
+  max-width: 100%;
+  text-align: left;
+  font-size: var(--font-size-lg);
+  color: var(--color-gray-100);
+  font-family: var(--font-poppins);
+}
+.mann-milaap-height {
+  margin: 0;
+}
+.mann-milaap-height-container {
+  height: 72px;
+  display: flex;
+  align-items: center;
+}
+.mann-milaap-ca,
+.mann-milaap-height-container,
+.mann-milaap-triple,
+.mann-milaap-vaishnav,
+.mann-milaap-vaishnav1 {
+  align-self: stretch;
+  position: relative;
+  line-height: 24px;
+}
+.mann-milaap-only {
+  margin: 0;
+}
+.mann-milaap-only-container {
+  align-self: stretch;
+  height: 72px;
+  position: relative;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+}
+.mann-milaap-height-body-group-parent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-13xl);
+}
+.mobile-registration-child {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0 var(--padding-19xl) 0 var(--padding-17xl-5);
+  text-align: left;
+  font-size: var(--font-size-lg);
+  color: var(--color-gray-100);
+  font-family: var(--font-poppins);
+}
+.mann-milaap-divorcee {
+  margin: 0;
+}
+.mann-milaap-divorcee-container {
+  height: 48px;
+  display: flex;
+  align-items: center;
+}
+.mann-milaap-broken,
+.mann-milaap-divorcee-container {
+  align-self: stretch;
+  position: relative;
+  line-height: 24px;
+}
+.mann-milaap-uk {
+  margin: 0;
+}
+.mann-milaap-uk-container {
+  height: 48px;
+  position: relative;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+}
+.mann-milaap-divorcee-group-parent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-13xl);
+}
+.mobile-registration-inner1 {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0 var(--padding-19xl) 0 var(--padding-17xl-5);
+  text-align: left;
+  font-size: var(--font-size-lg);
+  color: var(--color-gray-100);
+  font-family: var(--font-poppins);
+}
+.mann-milaap-handicapped {
+  align-self: stretch;
+}
+.mann-milaap-bigger,
+.mann-milaap-handicapped {
+  position: relative;
+  line-height: 24px;
+}
+.mann-milaap-35-65 {
+  margin: 0;
+}
+.mann-milaap-35-65-container {
+  align-self: stretch;
+  height: 48px;
+  position: relative;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+}
+.mann-milaap-handicapped-group-parent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-13xl);
+}
+.mobile-registration-inner2 {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0 var(--padding-19xl) 0 var(--padding-17xl-5);
+  text-align: left;
+  font-size: var(--font-size-lg);
+  color: var(--color-gray-100);
+  font-family: var(--font-poppins);
+}
+.mann-milaap-biggest {
+  margin: 0;
+}
+.mann-milaap-biggest-container {
+  align-self: stretch;
+  height: 72px;
+  position: relative;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+}
+.mann-milaap-mangal {
+  margin: 0;
+}
+.mann-milaap-mangal-container {
+  height: 48px;
+  display: flex;
+  align-items: center;
+}
+.mann-milaap-mangal-container,
+.mann-milaap-out {
+  align-self: stretch;
+  position: relative;
+  line-height: 24px;
+}
+.south-mumbai-worli {
+  margin: 0;
+}
+.south-mumbai-worli-container {
+  align-self: stretch;
+  height: 72px;
+  position: relative;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+}
+.mann-milaap-biggest-age-group-parent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-13xl);
+}
+.mobile-registration-inner3 {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0 var(--padding-19xl) 0 var(--padding-17xl-5);
+  text-align: left;
+  font-size: var(--font-size-lg);
+  color: var(--color-gray-100);
+  font-family: var(--font-poppins);
+}
+.mann-milaap-free {
+  margin: 0;
+}
+.mann-milaap-free-container {
+  align-self: stretch;
+  height: 48px;
+  position: relative;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+}
+.mann-milaap-low {
+  margin: 0;
+}
+.mann-milaap-low-container {
+  align-self: stretch;
+  height: 72px;
+  position: relative;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+}
+.mann-milaap-medical {
+  margin: 0;
+}
+.mann-milaap-medical-container {
+  align-self: stretch;
+  height: 48px;
+  position: relative;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+}
+.mann-milaap-dharmik {
+  margin: 0;
+}
+.mann-milaap-dharmik-container {
+  align-self: stretch;
+  height: 48px;
+  position: relative;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+}
+.mann-milaap-only1 {
+  margin: 0;
+}
+.mann-milaap-only-container1 {
+  height: 48px;
+  position: relative;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+}
+.mann-milaap-only-surat-group-wrapper {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0 0 15px;
+}
+.label3 {
+  width: 34px;
+  position: relative;
+  font-size: var(--font-size-base);
+  line-height: 24px;
+  text-transform: capitalize;
+  font-family: var(--font-roboto);
+  color: var(--color-gray-100);
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 34px;
+}
+.secondary-button-container,
+.secondary-button1 {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  box-sizing: border-box;
+}
+.secondary-button1 {
+  cursor: pointer;
+  border: 1px solid var(--color-silver-100);
+  padding: var(--padding-xs) var(--padding-4xl);
+  background-color: var(--color-white);
+  width: 82px;
+  border-radius: var(--br-9xs);
+  justify-content: flex-start;
+}
+.secondary-button-container {
+  width: 257px;
+  justify-content: center;
+  padding: 0 var(--padding-xl);
+}
+.mann-milaap-medical-group-parent {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-13xl);
+}
+.mann-milaap-free-group-parent {
+  flex: 1;
+  flex-direction: column;
+  gap: var(--gap-13xl);
+}
+.mann-milaap-free-group-parent,
+.mobile-registration,
+.mobile-registration-inner4 {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.mobile-registration-inner4 {
+  align-self: stretch;
+  flex-direction: row;
+  padding: 0 var(--padding-19xl) 0 var(--padding-17xl-5);
+  text-align: left;
+  font-size: var(--font-size-lg);
+  color: var(--color-gray-100);
+  font-family: var(--font-poppins);
+}
+.mobile-registration {
+  width: 100%;
+  position: relative;
+  background-color: var(--color-white);
+  overflow: hidden;
+  flex-direction: column;
+  padding: var(--padding-5xs) var(--padding-5xs) 19px 10px;
+  box-sizing: border-box;
+  gap: var(--gap-13xl);
+  letter-spacing: normal;
+}
