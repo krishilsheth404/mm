@@ -1,59 +1,365 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="initial-scale=1, width=device-width" />
 
-    <link rel="stylesheet" href="./global.css" />
-    <link rel="stylesheet" href="./index.css" />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap"
-    />
-  </head>
-  <body>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="initial-scale=1, width=device-width" />
+
+  <link rel="stylesheet" href="./global.css" />
+  <link rel="stylesheet" href="./index.css" />
+  <link rel="stylesheet" href="./MOBILERegistration.css" />
+  <link rel="stylesheet" href="./MOBILERegistration1.css" />
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" />
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js"
+    integrity="sha512-+k1pnlgt4F1H8L7t3z95o3/KO+o78INEcXTbnoJQ/F2VqDVhWoaiVml/OEHv9HsVgxUaVW+IbiZPUJQfF/YxZw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+    integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+  }
+
+  .container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 10px;
+    /* font-weight:; */
+  }
+
+  .checkbox-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  input[type="checkbox"] {
+    display: none;
+  }
+
+  label.checkbox {
+    position: relative;
+    display: block;
+    padding-left: 30px;
+    line-height: 24px;
+    cursor: pointer;
+    color: #333;
+  }
+
+  label.checkbox:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    border: 2px solid #333;
+    border-radius: 4px;
+    background-color: #fff;
+  }
+
+  input[type="checkbox"]:checked+label.checkbox:before {
+    background-color: #333;
+  }
+
+  input[type="checkbox"]:checked+label.checkbox:after {
+    content: "\2713";
+    position: absolute;
+    left: 5px;
+    top: 1px;
+    color: #fff;
+    font-size: 16px;
+  }
+
+  button {
+    display: block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: #0056b3;
+  }
+
+  #result {
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+    color: #333;
+  }
+</style>
+<style>
+  .container {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  h1 {
+    font-size: 32px;
+    font-weight: 600;
+    color: #000;
+    margin-bottom: 42px;
+    position: relative;
+    padding-bottom: 20px;
+  }
+
+  h1:after {
+    content: "";
+    width: 140px;
+    height: 4px;
+    background: red;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0 auto;
+    border-radius: 6px;
+  }
+
+  code {
+    color: red;
+  }
+
+  .plugin-setting-list li {
+    position: relative;
+    padding-left: 30px;
+    font-size: 16px;
+    color: #000000;
+    list-style-type: none;
+    margin-bottom: 15px;
+  }
+
+  .plugin-setting-list li:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' class='icon icon-tabler icon-tabler-check' width='24' height='24' viewBox='0 0 24 24' stroke-width='2' stroke='%23ffffff' fill='none' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath stroke='none' d='M0 0h24v24H0z' fill='none'%3E%3C/path%3E%3Cpath d='M5 12l5 5l10 -10'%3E%3C/path%3E%3C/svg%3E");
+    background-size: 14px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-color: #3cb371;
+    border-radius: 100%;
+  }
+
+  /* Plugin Style Start */
+  .kwt-file {
+    max-width: 380px;
+    margin: 0 auto;
+  }
+
+  .kwt-file__drop-area {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 25px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
+    transition: 0.3s;
+  }
+
+  .kwt-file__drop-area.is-active {
+    background-color: #d1def0;
+  }
+
+  .kwt-file__choose-file {
+    flex-shrink: 0;
+    background-color: #1d3557;
+    border-radius: 100%;
+    margin-right: 10px;
+    color: #ffffff;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .kwt-file__choose-file.kwt-file_btn-text {
+    border-radius: 4px;
+    width: auto;
+    height: auto;
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  .kwt-file__choose-file svg {
+    width: 24px;
+    height: 24px;
+    display: block;
+  }
+
+  .kwt-file__msg {
+    color: #1d3557;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.4;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .kwt-file__input {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+    opacity: 0;
+  }
+
+  .kwt-file__input:focus {
+    outline: none;
+  }
+
+  .kwt-file__delete {
+    display: none;
+    position: absolute;
+    right: 10px;
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+  }
+
+  .kwt-file__delete:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    transition: 0.3s;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg fill='%231d3557' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 438.5 438.5'%3e%3cpath d='M417.7 75.7A8.9 8.9 0 00411 73H323l-20-47.7c-2.8-7-8-13-15.4-18S272.5 0 264.9 0h-91.3C166 0 158.5 2.5 151 7.4c-7.4 5-12.5 11-15.4 18l-20 47.7H27.4a9 9 0 00-6.6 2.6 9 9 0 00-2.5 6.5v18.3c0 2.7.8 4.8 2.5 6.6a8.9 8.9 0 006.6 2.5h27.4v271.8c0 15.8 4.5 29.3 13.4 40.4a40.2 40.2 0 0032.3 16.7H338c12.6 0 23.4-5.7 32.3-17.2a64.8 64.8 0 0013.4-41V109.6h27.4c2.7 0 4.9-.8 6.6-2.5a8.9 8.9 0 002.6-6.6V82.2a9 9 0 00-2.6-6.5zm-248.4-36a8 8 0 014.9-3.2h90.5a8 8 0 014.8 3.2L283.2 73H155.3l14-33.4zm177.9 340.6a32.4 32.4 0 01-6.2 19.3c-1.4 1.6-2.4 2.4-3 2.4H100.5c-.6 0-1.6-.8-3-2.4a32.5 32.5 0 01-6.1-19.3V109.6h255.8v270.7z'/%3e%3cpath d='M137 347.2h18.3c2.7 0 4.9-.9 6.6-2.6a9 9 0 002.5-6.6V173.6a9 9 0 00-2.5-6.6 8.9 8.9 0 00-6.6-2.6H137c-2.6 0-4.8.9-6.5 2.6a8.9 8.9 0 00-2.6 6.6V338c0 2.7.9 4.9 2.6 6.6a8.9 8.9 0 006.5 2.6zM210.1 347.2h18.3a8.9 8.9 0 009.1-9.1V173.5c0-2.7-.8-4.9-2.5-6.6a8.9 8.9 0 00-6.6-2.6h-18.3a8.9 8.9 0 00-9.1 9.1V338a8.9 8.9 0 009.1 9.1zM283.2 347.2h18.3c2.7 0 4.8-.9 6.6-2.6a8.9 8.9 0 002.5-6.6V173.6c0-2.7-.8-4.9-2.5-6.6a8.9 8.9 0 00-6.6-2.6h-18.3a9 9 0 00-6.6 2.6 8.9 8.9 0 00-2.5 6.6V338a9 9 0 002.5 6.6 9 9 0 006.6 2.6z'/%3e%3c/svg%3e");
+  }
+
+  .kwt-file__delete:after {
+    content: "";
+    position: absolute;
+    opacity: 0;
+    left: 50%;
+    top: 50%;
+    width: 100%;
+    height: 100%;
+    transform: translate(-50%, -50%) scale(0);
+    background-color: #1d3557;
+    border-radius: 50%;
+    transition: 0.3s;
+  }
+
+  .kwt-file__delete:hover:after {
+    transform: translate(-50%, -50%) scale(2.2);
+    opacity: 0.1;
+  }
+
+  /* Plugin Style End */
+</style>
+<style>
+  .toggle {
+    position: relative;
+    width: 80px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: #ddd;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  .toggle:before {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    color: #333;
+    transition: transform 0.3s, color 0.3s;
+  }
+
+  input[type="checkbox"]:checked+.toggle:before {
+    left: calc(100% - 40px);
+    color: #fff;
+  }
+
+  .toggle:after {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: #fff;
+    transition: transform 0.3s;
+  }
+
+  input[type="checkbox"]:checked+.toggle:after {
+    transform: translateX(40px);
+  }
+</style>
+
+<body>
+  <form action="/sendData" method="post">
+
     <div class="mobile-profile-info">
-      <header class="mobile-profile-info-inner">
+      <header class="mobile-profile-info-inner" style="display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;">
         <div class="title-bod-fr-parent">
           <div class="title-bod-fr">
             <div class="progress-bar-indicators">
-              <img
-                class="logo-icon"
-                loading="lazy"
-                alt=""
-                src="./public/logo@2x.png"
-              />
+              <img class="logo-icon" loading="lazy" alt="" src="./public/logo@2x.png" />
 
               <div class="label-wrapper">
                 <b class="label">Mann Milaap</b>
               </div>
             </div>
           </div>
-          <img class="icon" loading="lazy" alt="" src="./public/icon.svg" />
         </div>
       </header>
-      <main class="progress-bar-parent">
-        <div class="progress-bar">
-          <div class="progress-bar1">
-            <div class="active-indicator"></div>
-            <div class="default-indicator">
-              <div class="default-line"></div>
-            </div>
-            <div class="default-indicator1"></div>
-            <div class="default-indicator2">
-              <div class="default-line1"></div>
-            </div>
-            <div class="default-indicator3"></div>
-          </div>
-        </div>
+      <main class="progress-bar-parent" style="padding: 0px;">
+
         <section class="frame-wrapper">
           <div class="large-title-parent">
             <h1 class="large-title">Profile info</h1>
@@ -69,15 +375,36 @@
           <div class="personal-data-parent">
             <h3 class="personal-data">Personal data</h3>
             <div class="specify-exactly-as">
-              Specify exactly as in your passport
+              fill all the detailes mentioned
             </div>
           </div>
         </div>
+        <div style="margin-left: 20px;margin-left: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-wrap: nowrap;
+        column-gap: 16px;">
+          <span>BOY</span>
+          <input type="checkbox" name="gender" id="gender-toggle"  value="boy">
+          <label class="toggle" for="gender-toggle" onclick="changeGender()"></label>
+          <span>GIRL</span>
+        </div>
+        <script>
+          function changeGender() {
+            const checkbox = document.getElementById('gender-toggle');
+            if (checkbox.value === 'boy') {
+              checkbox.value = 'girl';
+            } else {
+              checkbox.value = 'boy';
+            }
+          }
+        </script>
         <div class="frame-div">
           <div class="field-label-parent">
             <div class="field-label">Full name</div>
             <div class="frame-parent">
-              <input class="frame-child" placeholder="Alexander" type="text" />
+              <input class="frame-child" placeholder="Name" name="full_name" id="full_name" type="text" />
 
               <div class="input-container"></div>
             </div>
@@ -88,62 +415,42 @@
             <div class="field-label1">
               Contact  Number (The one to be added to the whatsapp group)
             </div>
-            <div class="frame-group">
-              <div class="field-text-wrapper">
-                <div class="field-text">+91 93xxx xxxxx</div>
-              </div>
-              <div class="line1"></div>
+            <div class="frame-parent">
+              <input class="frame-child" placeholder="+91" name="contact_number" id="contact_number" type="number">
+
+              <div class="input-container"></div>
             </div>
           </div>
         </section>
         <div class="frame-wrapper1">
           <div class="field-label-container">
             <div class="field-label2">Candidate's Phone Number</div>
-            <div class="frame-parent1">
-              <div class="field-text-container">
-                <div class="field-text1">+91 93xxx xxxxx</div>
-              </div>
-              <div class="vertical-separator"></div>
+            <div class="frame-parent">
+              <input class="frame-child" placeholder="+91" name="candidate_contact_number" id="candidate_contact_number"
+                type="number">
+
+              <div class="input-container"></div>
             </div>
           </div>
         </div>
         <div class="frame-wrapper2">
           <div class="field-label-parent1">
             <div class="field-label3">Date of Birth</div>
-            <div class="icon-parent">
-              <img
-                class="icon1"
-                loading="lazy"
-                alt=""
-                src="./public/icon-1.svg"
-              />
-
-              <div class="frame-parent2">
-                <div class="field-text-frame">
-                  <div class="field-text2">12.05.1992</div>
-                </div>
-                <div class="line2"></div>
-              </div>
+            <div class="field-text-frame">
+              <input type="date" name="date_of_birth" id="date_of_births" style="border: none;border: none;
+                height: 40px;
+                width: 70%;">
             </div>
+            <div class="line2"></div>
           </div>
         </div>
         <div class="frame-wrapper3">
           <div class="field-label-parent2">
             <div class="field-label4">Place of Birth</div>
-            <div class="icon-group">
-              <img
-                class="icon2"
-                loading="lazy"
-                alt=""
-                src="./public/icon-1.svg"
-              />
+            <div class="frame-parent">
+              <input required class="frame-child" name="place_birth" id="place_birth" placeholder="Place" type="text">
 
-              <div class="frame-parent3">
-                <div class="field-text-wrapper1">
-                  <div class="field-text3">New York, USA</div>
-                </div>
-                <div class="line3"></div>
-              </div>
+              <div class="input-container"></div>
             </div>
           </div>
         </div>
@@ -151,7 +458,8 @@
           <div class="field-label-parent3">
             <div class="field-label5">Father's Full Name</div>
             <div class="frame-parent4">
-              <input class="frame-item" placeholder="Alexander" type="text" />
+              <input required class="frame-item" name="father_full_name" id="father_full_name"
+                placeholder="Father's Name" type="text" />
 
               <div class="line4"></div>
             </div>
@@ -161,7 +469,8 @@
           <div class="field-label-parent4">
             <div class="field-label6">Mother's Full Name</div>
             <div class="frame-parent5">
-              <input class="frame-inner" placeholder="Alexander" type="text" />
+              <input required class="frame-inner" name="mother_full_name" id="mother_full_name"
+                placeholder="Mother's Name" type="text" />
 
               <div class="line5"></div>
             </div>
@@ -170,11 +479,11 @@
         <div class="frame-wrapper6">
           <div class="field-label-parent5">
             <div class="field-label7">Email Id</div>
-            <div class="frame-parent6">
-              <div class="field-text-wrapper2">
-                <div class="field-text4">email@gmail.com</div>
-              </div>
-              <div class="line6"></div>
+            <div class="frame-parent">
+              <input required class="frame-child" name="email_id" id="email_id" placeholder="xyz@gmail.com" type="email"
+                required />
+
+              <div class="input-container"></div>
             </div>
           </div>
         </div>
@@ -182,7 +491,8 @@
           <div class="field-label-parent6">
             <div class="field-label8">Highest Level of Education</div>
             <div class="frame-parent7">
-              <input class="frame-input" placeholder="text" type="text" />
+              <input required class="frame-input" name="highest_education" id="highest_education"
+                placeholder="Education" type="text" />
 
               <div class="line7"></div>
             </div>
@@ -191,31 +501,500 @@
         <div class="frame-wrapper8">
           <div class="field-label-parent7">
             <div class="field-label9">Occupation</div>
-            <input class="contents" type="text" />
+
+            <div class="frame-parent">
+              <input required class="frame-child" name="occupation" id="occupation" placeholder="Occupation"
+                type="text" />
+
+              <div class="input-container"></div>
+            </div>
           </div>
         </div>
         <div class="frame-wrapper9">
           <div class="field-label-parent8">
             <div class="field-label10">Religion | Caste | Samaj</div>
-            <input class="contents1" type="text" />
+            <div class="frame-parent">
+              <input required class="frame-child" name="religion" id="religion" placeholder="Caste" type="text" />
+
+              <div class="input-container"></div>
+            </div>
           </div>
         </div>
-        <div class="field-label-wrapper">
+        <div class="field-label-wrapper" style="display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        flex-direction: column;">
           <div class="field-label11">Address (Please mention Area)</div>
+
+          <div class="frame-parent" style="margin-top: 10px;">
+            <input required class="frame-child" name="address_area" id="address_area" placeholder="Name" type="text" />
+
+            <div class="input-container"></div>
+          </div>
         </div>
+
+        <div class="mobile-registration" style="    margin-top: 20px;">
+
+          <section class="frame-parent8" style="    margin-left: 10px;">
+
+            <div class="frame-wrapper11">
+              <div class="large-title-group">
+                <h2 class="large-title1">Mann Milaap Groups</h2>
+                <div class="body-text1">
+                  Please select the groups you would like to be a part of (Refer to
+                  the PDF sent for more information)
+                </div>
+              </div>
+            </div>
+            <div class="select-parent">
+              <div class="mann-milaap-digital-container">
+                <span>
+                  <input type="checkbox" id="checkbox1" value="Mann Milaap Digital Group">
+                  <label class="checkbox" for="checkbox1">Mann Milaap Digital Group</label>
+                </span>
+              </div>
+            </div>
+            <div class="select-group">
+              <div class="mann-milaap-apple-group-wrapper">
+                <div class="mann-milaap-apple-container">
+                  <span>
+                    <input type="checkbox" id="checkbox2" value="Mann Milaap Apple Group">
+                    <label class="checkbox" for="checkbox2">Mann Milaap Apple Group</label>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div class="mann-milaap-deravasi-container" style="margin-top: 10px;
+    margin-bottom: 10px;">
+                <span>
+                  <input type="checkbox" id="checkbox3" value="Mann Milaap Deravasi Group">
+                  <label class="checkbox" for="checkbox3">Mann Milaap Deravasi Group</label>
+                </span>
+              </div>
+            </div>
+            <div>
+              <div class="patanghad-group">
+                <span>
+                  <input type="checkbox" id="checkbox4" value="Patanghad Group">
+                  <label class="checkbox" for="checkbox4">Patanghad Group</label>
+                </span>
+              </div>
+            </div>
+            <div>
+              <div class="only-sthanakwasi-group-container">
+                <span>
+                  <input type="checkbox" id="checkbox5" value="Only Sthanakwasi Group (1)">
+                  <label class="checkbox" for="checkbox5">Only Sthanakwasi Group (1)</label>
+                </span>
+              </div>
+            </div>
+            <div>
+              <div class="only-sthanakwasi-group-container1">
+                <span>
+                  <input type="checkbox" id="checkbox6" value="Only Sthanakwasi Group (2)">
+                  <label class="checkbox" for="checkbox6">Only Sthanakwasi Group (2)</label>
+                </span>
+              </div>
+            </div>
+            <div>
+              <div class="only-canada-group-container">
+                <span>
+                  <input type="checkbox" id="checkbox7" value="Only Canada Group">
+                  <label class="checkbox" for="checkbox7">Only Canada Group</label>
+                </span>
+              </div>
+            </div>
+            <div>
+              <input type="checkbox" id="checkbox8" value="H1B Visa Group">
+              <label class="checkbox" for="checkbox8">H1B Visa Group</label>
+            </div>
+            <div>
+              <div class="nri-group-citizenship">
+                <span>
+                  <input type="checkbox" id="checkbox9" value="  NRI Group (Citizenship and Green Card Holder)">
+                  <label class="checkbox" for="checkbox9"> NRI Group (Citizenship and Green Card Holder)</label>
+                </span>
+              </div>
+            </div>
+
+            <div class="far-east-group-container" style="margin-top: 10px;
+    margin-bottom: 10px;">
+              <span>
+                <input type="checkbox" id="checkbox10" value="Far East Group">
+                <label class="checkbox" for="checkbox10">Far East Group</label>
+              </span>
+
+            </div>
+
+            <div style="margin-top: 10px;
+    margin-bottom: 10px;">
+              <span>
+                <input type="checkbox" id="checkbox11" value="  Mann Milaap Height Body Group">
+                <label class="checkbox" for="checkbox11"> Mann Milaap Height Body Group</label>
+              </span>
+            </div>
+
+            <div style="margin-top: 10px;
+    margin-bottom: 10px;">
+              <span>
+                <input type="checkbox" id="checkbox12" value="  Mann Milaap Vaishnav Group (1)">
+                <label class="checkbox" for="checkbox12"> Mann Milaap Vaishnav Group (1)</label>
+              </span>
+            </div>
+            <div style="margin-top: 10px;
+    margin-bottom: 10px;">
+              <span>
+                <input type="checkbox" id="checkbox13" value=" Mann Milaap Vaishnav Group (2)">
+                <label class="checkbox" for="checkbox13"> Mann Milaap Vaishnav Group (2)</label>
+              </span>
+            </div>
+            <div style="margin-top: 10px;
+    margin-bottom: 10px;">
+              <span>
+                <input type="checkbox" id="checkbox14" value="Mann Milaap Triple Financial Group">
+                <label class="checkbox" for="checkbox14"> Mann Milaap Triple Financial Group</label>
+              </span>
+            </div>
+            <div style="margin-top: 10px;
+    margin-bottom: 10px;">
+              <span>
+                <input type="checkbox" id="checkbox15" value="Mann Milaap CA & Engineers Group                  ">
+                <label class="checkbox" for="checkbox15">Mann Milaap CA & Engineers Group</label>
+              </span>
+            </div>
+            <div style="margin-top: 10px;
+    margin-bottom: 10px;">
+              <span>
+                <input type="checkbox" id="checkbox16" value="Mann Milaap Only Doctors Group
+                  ">
+                <label class="checkbox" for="checkbox16">Mann Milaap Only Doctors Group
+                </label>
+              </span>
+            </div>
+
+            <div style="margin-top: 10px;
+    margin-bottom: 10px;">
+              <span>
+                <input type="checkbox" id="checkbox17" value="Mann Milaap Divorcee Group
+">
+                <label class="checkbox" for="checkbox17">Mann Milaap Divorcee Group
+                </label>
+              </span>
+            </div>
+            <div style="margin-top: 10px;
+    margin-bottom: 10px;">
+              <span>
+                <input type="checkbox" id="checkbox18" value="Mann Milaap Broken Goldhana Group
+">
+                <label class="checkbox" for="checkbox18">Mann Milaap Broken Goldhana Group
+                </label>
+              </span>
+            </div>
+            <div style="margin-top: 10px;
+    margin-bottom: 10px;">
+              <span>
+                <input type="checkbox" id="checkbox19" value="Mann Milaap UK Europe Group
+">
+                <label class="checkbox" for="checkbox19">Mann Milaap UK Europe Group
+                </label>
+              </span>
+            </div>
+            <div style="margin-top: 10px;
+    margin-bottom: 10px;">
+              <span>
+                <input type="checkbox" id="checkbox20" value="Mann Milaap Handicapped Group
+">
+                <label class="checkbox" for="checkbox20">Mann Milaap Handicapped Group
+                </label>
+              </span>
+            </div>
+            <div style="margin-top: 10px;
+    margin-bottom: 10px;">
+              <span>
+                <input type="checkbox" id="checkbox21" value="Mann Milaap Bigger Age Group
+">
+                <label class="checkbox" for="checkbox21">Mann Milaap Bigger Age Group
+                </label>
+              </span>
+            </div>
+            <div style="margin-top: 10px;
+    margin-bottom: 10px;">
+              <span>
+                <input type="checkbox" id="checkbox22" value="Mann Milaap 35-65 Group
+">
+                <label class="checkbox" for="checkbox22">Mann Milaap 35-65 Group
+                </label>
+              </span>
+            </div>
+            <div style="margin-top: 10px;
+    margin-bottom: 10px;">
+              <span>
+                <input type="checkbox" id="checkbox23" value="Mann Milaap Biggest Age Group
+">
+                <label class="checkbox" for="checkbox23">Mann Milaap Biggest Age Group
+                </label>
+              </span>
+            </div>
+            <div style="margin-top: 10px;
+    margin-bottom: 10px;">
+              <span>
+                <input type="checkbox" id="checkbox24" value="Mann Milaap Mangal Group
+">
+                <label class="checkbox" for="checkbox24">Mann Milaap Mangal Group
+                </label>
+              </span>
+            </div>
+            <div style="margin-top: 10px;
+    margin-bottom: 10px;">
+              <span>
+                <input type="checkbox" id="checkbox25" value="Mann Milaap Out of Mumbai Group
+">
+                <label class="checkbox" for="checkbox25">Mann Milaap Out of Mumbai Group
+                </label>
+              </span>
+            </div>
+            <div style="margin-top: 10px;
+    margin-bottom: 10px;">
+              <span>
+                <input type="checkbox" id="checkbox26" value="South Mumbai (Worli to Colaba) Grou
+">
+                <label class="checkbox" for="checkbox26">South Mumbai (Worli to Colaba) Grou
+                </label>
+              </span>
+            </div>
+            <div style="margin-top: 10px;
+    margin-bottom: 10px;">
+              <span>
+                <input type="checkbox" id="checkbox27" value="Mann Milaap Free Group
+">
+                <label class="checkbox" for="checkbox27">Mann Milaap Free Group
+                </label>
+              </span>
+            </div>
+            <div style="margin-top: 10px;
+    margin-bottom: 10px;">
+              <span>
+                <input type="checkbox" id="checkbox28" value="Mann Milaap Low Education Big Business Group
+">
+                <label class="checkbox" for="checkbox28">Mann Milaap Low Education Big Business Group
+                </label>
+              </span>
+            </div>
+            <div style="margin-top: 10px;
+    margin-bottom: 10px;">
+              <span>
+                <input type="checkbox" id="checkbox29" value="Mann Milaap Medical Group
+">
+                <label class="checkbox" for="checkbox29">Mann Milaap Medical Group
+                </label>
+              </span>
+            </div>
+            <div style="margin-top: 10px;
+    margin-bottom: 10px;">
+              <span>
+                <input type="checkbox" id="checkbox30" value="Mann Milaap Dharmik Group
+">
+                <label class="checkbox" for="checkbox30">Mann Milaap Dharmik Group
+                </label>
+              </span>
+            </div>
+            <div style="margin-top: 10px;
+    margin-bottom: 10px;">
+              <span>
+                <input type="checkbox" id="checkbox31" value="Mann Milaap Only Surat Grou
+">
+                <label class="checkbox" for="checkbox31">Mann Milaap Only Surat Grou
+                </label>
+              </span>
+            </div>
+
+        </div>
+        </section>
+
+
+        <section class="">
+          <div class="bio-data-parent" style="margin-left: 20px;">
+            <div class="bio-data">BIO DATA :)</div>
+            <div class="secondary-button-frame">
+              <div class="container">
+                <div class="box" style="height: 96px;">
+
+                  <form>
+                    <input required id="demo1" class="demo1" type="file" multiple placeholder="Select Files"
+                      name="demo1[]" />
+
+                    <br>
+                  </form>
+
+                </div>
+              </div>
+
+
+            </div>
+            <div class="adhaar-card">ADHAAR CARD :)</div>
+            <div class="secondary-button-frame">
+              <div class="container">
+                <div class="box" style="height: 96px;">
+
+                  <form>
+                    <input required id="demo1" class="demo1" type="file" multiple placeholder="Select Files"
+                      name="demo1[]" />
+
+                    <br>
+                  </form>
+
+                </div>
+              </div>
+
+
+            </div>
+            <div class="pan-card">Pan Card :)</div>
+            <div class="secondary-button-frame">
+              <div class="container">
+                <div class="box" style="height: 96px;">
+
+                  <form>
+                    <input required id="demo1" class="demo1" type="file" multiple placeholder="Select Files"
+                      name="demo1[]" />
+
+                    <br>
+                  </form>
+
+                </div>
+              </div>
+
+
+            </div>
+          </div>
+        </section>
+
+
       </main>
-      <div class="contents2"></div>
       <footer class="mobile-profile-info-child">
+
         <div class="line-parent">
-          <div class="line8"></div>
-          <div class="secondary-button-wrapper">
-            <button class="secondary-button">
-              <div class="label1">next</div>
-              <img class="icon3" alt="" src="./public/icon-3.svg" />
-            </button>
+          <div class="secondary-button-wrapper" style="margin: auto;">
+            <a href="MOBILERegistration1.html">
+              <button class="secondary-button">
+                <div class="label1">SUBMIT</div>
+                <img class="icon3" alt="" src="./public/icon-3.svg" />
+              </button>
+            </a>
           </div>
         </div>
       </footer>
     </div>
-  </body>
+
+  </form>
+
+</body>
+<script>
+  function showSelection() {
+    const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+    const selectedOptions = [];
+    checkboxes.forEach(checkbox => {
+      if (checkbox.checked) {
+        selectedOptions.push(checkbox.value);
+      }
+    });
+    document.getElementById('result').textContent = 'Selected Options: ' + selectedOptions.join(', ');
+  }
+</script>
+<script>
+  (function ($) {
+    /**
+     * Create drag and drop element.
+     */
+    var customDragandDrop = function (element) {
+      $(element).addClass("kwt-file__input");
+      var element = $(element).wrap(
+        `<div class="kwt-file"><div class="kwt-file__drop-area"><span class='kwt-file__choose-file ${element.attributes.data_btn_text
+          ? "" === element.attributes.data_btn_text.textContent
+            ? ""
+            : "kwt-file_btn-text"
+          : ""
+        }'>${element.attributes.data_btn_text
+          ? "" === element.attributes.data_btn_text.textContent
+            ? `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor"><path d="M67.508 468.467c-58.005-58.013-58.016-151.92 0-209.943l225.011-225.04c44.643-44.645 117.279-44.645 161.92 0 44.743 44.749 44.753 117.186 0 161.944l-189.465 189.49c-31.41 31.413-82.518 31.412-113.926.001-31.479-31.482-31.49-82.453 0-113.944L311.51 110.491c4.687-4.687 12.286-4.687 16.972 0l16.967 16.971c4.685 4.686 4.685 12.283 0 16.969L184.983 304.917c-12.724 12.724-12.73 33.328 0 46.058 12.696 12.697 33.356 12.699 46.054-.001l189.465-189.489c25.987-25.989 25.994-68.06.001-94.056-25.931-25.934-68.119-25.932-94.049 0l-225.01 225.039c-39.249 39.252-39.258 102.795-.001 142.057 39.285 39.29 102.885 39.287 142.162-.028A739446.174 739446.174 0 0 1 439.497 238.49c4.686-4.687 12.282-4.684 16.969.004l16.967 16.971c4.685 4.686 4.689 12.279.004 16.965a755654.128 755654.128 0 0 0-195.881 195.996c-58.034 58.092-152.004 58.093-210.048.041z" /></svg>`
+            : `${element.attributes.data_btn_text.textContent}`
+          : `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor"><path d="M67.508 468.467c-58.005-58.013-58.016-151.92 0-209.943l225.011-225.04c44.643-44.645 117.279-44.645 161.92 0 44.743 44.749 44.753 117.186 0 161.944l-189.465 189.49c-31.41 31.413-82.518 31.412-113.926.001-31.479-31.482-31.49-82.453 0-113.944L311.51 110.491c4.687-4.687 12.286-4.687 16.972 0l16.967 16.971c4.685 4.686 4.685 12.283 0 16.969L184.983 304.917c-12.724 12.724-12.73 33.328 0 46.058 12.696 12.697 33.356 12.699 46.054-.001l189.465-189.489c25.987-25.989 25.994-68.06.001-94.056-25.931-25.934-68.119-25.932-94.049 0l-225.01 225.039c-39.249 39.252-39.258 102.795-.001 142.057 39.285 39.29 102.885 39.287 142.162-.028A739446.174 739446.174 0 0 1 439.497 238.49c4.686-4.687 12.282-4.684 16.969.004l16.967 16.971c4.685 4.686 4.689 12.279.004 16.965a755654.128 755654.128 0 0 0-195.881 195.996c-58.034 58.092-152.004 58.093-210.048.041z" /></svg>`
+        }</span>${element.outerHTML}</span><span class="kwt-file__msg">${"" === element.placeholder ? "or drop files here" : `${element.placeholder}`
+        }</span><div class="kwt-file__delete"></div></div></div>`
+      );
+      var element = element.parents(".kwt-file");
+
+      // Add class on focus and drage enter event.
+      element.on("dragenter focus click", ".kwt-file__input", function (e) {
+        $(this).parents(".kwt-file__drop-area").addClass("is-active");
+      });
+
+      // Remove class on blur and drage leave event.
+      element.on("dragleave blur drop", ".kwt-file__input", function (e) {
+        $(this).parents(".kwt-file__drop-area").removeClass("is-active");
+      });
+
+      // Show filename when change file.
+      element.on("change", ".kwt-file__input", function (e) {
+        let filesCount = $(this)[0].files.length;
+        let textContainer = $(this).next(".kwt-file__msg");
+        if (1 === filesCount) {
+          let fileName = $(this).val().split("\\").pop();
+          textContainer
+            .text(fileName)
+            .next(".kwt-file__delete")
+            .css("display", "block");
+        } else if (filesCount > 1) {
+          textContainer
+            .text(filesCount + " files selected")
+            .next(".kwt-file__delete")
+            .css("display", "inline-block");
+        } else {
+          textContainer.text(
+            `${"" === this[0].placeholder
+              ? "or drop files here"
+              : `${this[0].placeholder}`
+            }`
+          );
+          $(this)
+            .parents(".kwt-file")
+            .find(".kwt-file__delete")
+            .css("display", "none");
+        }
+      });
+
+      // Delete selected file.
+      element.on("click", ".kwt-file__delete", function (e) {
+        let deleteElement = $(this);
+        deleteElement.parents(".kwt-file").find(`.kwt-file__input`).val(null);
+        deleteElement
+          .css("display", "none")
+          .prev(`.kwt-file__msg`)
+          .text(
+            `${"" ===
+              $(this).parents(".kwt-file").find(".kwt-file__input")[0].placeholder
+              ? "or drop files here"
+              : `${$(this).parents(".kwt-file").find(".kwt-file__input")[0].placeholder
+              }`
+            }`
+          );
+      });
+    };
+
+    $.fn.kwtFileUpload = function (e) {
+      var _this = $(this);
+      $.each(_this, function (index, element) {
+        customDragandDrop(element);
+      });
+      return this;
+    };
+  })(jQuery);
+
+  // Plugin initialize
+  jQuery(document).ready(function ($) {
+    $(".demo1").kwtFileUpload();
+  });
+
+</script>
+
 </html>
