@@ -339,7 +339,7 @@
 </style>
 
 <body>
-  <form action="/sendData" method="post">
+  <form action="/sendData" method="post" novalidate>
 
     <div class="mobile-profile-info">
       <header class="mobile-profile-info-inner" style="display: flex;
@@ -386,17 +386,20 @@
         flex-wrap: nowrap;
         column-gap: 16px;">
           <span>BOY</span>
-          <input type="checkbox" name="gender" id="gender-toggle"  value="boy">
-          <label class="toggle" for="gender-toggle" onclick="changeGender()"></label>
+          <input type="text" name="gender" id="gender" value="boy" style="height: 0px;width: 0px;font-size: 0px;visibility: hidden;">
+          <input type="checkbox" name="g" id="g"  value="boy">
+          <label class="toggle" for="g" onclick="changeGender()"></label>
           <span>GIRL</span>
         </div>
         <script>
           function changeGender() {
-            const checkbox = document.getElementById('gender-toggle');
+            const checkbox = document.getElementById('g');
             if (checkbox.value === 'boy') {
+              document.getElementById('gender').value='girl';
               checkbox.value = 'girl';
             } else {
               checkbox.value = 'boy';
+              document.getElementById('gender').value='boy';
             }
           }
         </script>
@@ -448,7 +451,7 @@
           <div class="field-label-parent2">
             <div class="field-label4">Place of Birth</div>
             <div class="frame-parent">
-              <input required class="frame-child" name="place_birth" id="place_birth" placeholder="Place" type="text">
+              <input  class="frame-child" name="place_birth" id="place_birth" placeholder="Place" type="text">
 
               <div class="input-container"></div>
             </div>
@@ -458,7 +461,7 @@
           <div class="field-label-parent3">
             <div class="field-label5">Father's Full Name</div>
             <div class="frame-parent4">
-              <input required class="frame-item" name="father_full_name" id="father_full_name"
+              <input  class="frame-item" name="father_full_name" id="father_full_name"
                 placeholder="Father's Name" type="text" />
 
               <div class="line4"></div>
@@ -469,7 +472,7 @@
           <div class="field-label-parent4">
             <div class="field-label6">Mother's Full Name</div>
             <div class="frame-parent5">
-              <input required class="frame-inner" name="mother_full_name" id="mother_full_name"
+              <input  class="frame-inner" name="mother_full_name" id="mother_full_name"
                 placeholder="Mother's Name" type="text" />
 
               <div class="line5"></div>
@@ -480,8 +483,8 @@
           <div class="field-label-parent5">
             <div class="field-label7">Email Id</div>
             <div class="frame-parent">
-              <input required class="frame-child" name="email_id" id="email_id" placeholder="xyz@gmail.com" type="email"
-                required />
+              <input  class="frame-child" name="email_id" id="email_id" placeholder="xyz@gmail.com" type="email"
+                 />
 
               <div class="input-container"></div>
             </div>
@@ -491,7 +494,7 @@
           <div class="field-label-parent6">
             <div class="field-label8">Highest Level of Education</div>
             <div class="frame-parent7">
-              <input required class="frame-input" name="highest_education" id="highest_education"
+              <input  class="frame-input" name="highest_education" id="highest_education"
                 placeholder="Education" type="text" />
 
               <div class="line7"></div>
@@ -503,7 +506,7 @@
             <div class="field-label9">Occupation</div>
 
             <div class="frame-parent">
-              <input required class="frame-child" name="occupation" id="occupation" placeholder="Occupation"
+              <input  class="frame-child" name="occupation" id="occupation" placeholder="Occupation"
                 type="text" />
 
               <div class="input-container"></div>
@@ -514,7 +517,7 @@
           <div class="field-label-parent8">
             <div class="field-label10">Religion | Caste | Samaj</div>
             <div class="frame-parent">
-              <input required class="frame-child" name="religion" id="religion" placeholder="Caste" type="text" />
+              <input  class="frame-child" name="religion" id="religion" placeholder="Caste" type="text" />
 
               <div class="input-container"></div>
             </div>
@@ -527,7 +530,7 @@
           <div class="field-label11">Address (Please mention Area)</div>
 
           <div class="frame-parent" style="margin-top: 10px;">
-            <input required class="frame-child" name="address_area" id="address_area" placeholder="Name" type="text" />
+            <input  class="frame-child" name="address_area" id="address_area" placeholder="Name" type="text" />
 
             <div class="input-container"></div>
           </div>
@@ -812,7 +815,7 @@
         </div>
         </section>
 
-
+<!-- 
         <section class="">
           <div class="bio-data-parent" style="margin-left: 20px;">
             <div class="bio-data">BIO DATA :)</div>
@@ -821,7 +824,7 @@
                 <div class="box" style="height: 96px;">
 
                   <form>
-                    <input required id="demo1" class="demo1" type="file" multiple placeholder="Select Files"
+                    <input  id="demo1" class="demo1" type="file" multiple placeholder="Select Files"
                       name="demo1[]" />
 
                     <br>
@@ -838,7 +841,7 @@
                 <div class="box" style="height: 96px;">
 
                   <form>
-                    <input required id="demo1" class="demo1" type="file" multiple placeholder="Select Files"
+                    <input  id="demo1" class="demo1" type="file" multiple placeholder="Select Files"
                       name="demo1[]" />
 
                     <br>
@@ -855,7 +858,7 @@
                 <div class="box" style="height: 96px;">
 
                   <form>
-                    <input required id="demo1" class="demo1" type="file" multiple placeholder="Select Files"
+                    <input  id="demo1" class="demo1" type="file" multiple placeholder="Select Files"
                       name="demo1[]" />
 
                     <br>
@@ -867,7 +870,7 @@
 
             </div>
           </div>
-        </section>
+        </section> -->
 
 
       </main>
