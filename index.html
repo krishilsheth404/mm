@@ -386,8 +386,9 @@
         flex-wrap: nowrap;
         column-gap: 16px;">
           <span>BOY</span>
-          <input type="text" name="gender" id="gender" value="boy" style="height: 0px;width: 0px;font-size: 0px;visibility: hidden;">
-          <input type="checkbox" name="g" id="g"  value="boy">
+          <input type="text" name="gender" id="gender" value="boy"
+            style="height: 0px;width: 0px;font-size: 0px;visibility: hidden;">
+          <input type="checkbox" name="g" id="g" value="boy">
           <label class="toggle" for="g" onclick="changeGender()"></label>
           <span>GIRL</span>
         </div>
@@ -395,11 +396,11 @@
           function changeGender() {
             const checkbox = document.getElementById('g');
             if (checkbox.value === 'boy') {
-              document.getElementById('gender').value='girl';
+              document.getElementById('gender').value = 'girl';
               checkbox.value = 'girl';
             } else {
               checkbox.value = 'boy';
-              document.getElementById('gender').value='boy';
+              document.getElementById('gender').value = 'boy';
             }
           }
         </script>
@@ -443,6 +444,7 @@
               <input type="date" name="date_of_birth" id="date_of_births" style="border: none;border: none;
                 height: 40px;
                 width: 70%;">
+              <input type="text" name="expire_date" id="expire_date" style="height: 0px;width: 0px;visibility: hidden;font-size: 0px;">
             </div>
             <div class="line2"></div>
           </div>
@@ -451,7 +453,7 @@
           <div class="field-label-parent2">
             <div class="field-label4">Place of Birth</div>
             <div class="frame-parent">
-              <input  class="frame-child" name="place_birth" id="place_birth" placeholder="Place" type="text">
+              <input class="frame-child" name="place_birth" id="place_birth" placeholder="Place" type="text">
 
               <div class="input-container"></div>
             </div>
@@ -461,8 +463,8 @@
           <div class="field-label-parent3">
             <div class="field-label5">Father's Full Name</div>
             <div class="frame-parent4">
-              <input  class="frame-item" name="father_full_name" id="father_full_name"
-                placeholder="Father's Name" type="text" />
+              <input class="frame-item" name="father_full_name" id="father_full_name" placeholder="Father's Name"
+                type="text" />
 
               <div class="line4"></div>
             </div>
@@ -472,8 +474,8 @@
           <div class="field-label-parent4">
             <div class="field-label6">Mother's Full Name</div>
             <div class="frame-parent5">
-              <input  class="frame-inner" name="mother_full_name" id="mother_full_name"
-                placeholder="Mother's Name" type="text" />
+              <input class="frame-inner" name="mother_full_name" id="mother_full_name" placeholder="Mother's Name"
+                type="text" />
 
               <div class="line5"></div>
             </div>
@@ -483,8 +485,7 @@
           <div class="field-label-parent5">
             <div class="field-label7">Email Id</div>
             <div class="frame-parent">
-              <input  class="frame-child" name="email_id" id="email_id" placeholder="xyz@gmail.com" type="email"
-                 />
+              <input class="frame-child" name="email_id" id="email_id" placeholder="xyz@gmail.com" type="email" />
 
               <div class="input-container"></div>
             </div>
@@ -494,8 +495,8 @@
           <div class="field-label-parent6">
             <div class="field-label8">Highest Level of Education</div>
             <div class="frame-parent7">
-              <input  class="frame-input" name="highest_education" id="highest_education"
-                placeholder="Education" type="text" />
+              <input class="frame-input" name="highest_education" id="highest_education" placeholder="Education"
+                type="text" />
 
               <div class="line7"></div>
             </div>
@@ -506,8 +507,7 @@
             <div class="field-label9">Occupation</div>
 
             <div class="frame-parent">
-              <input  class="frame-child" name="occupation" id="occupation" placeholder="Occupation"
-                type="text" />
+              <input class="frame-child" name="occupation" id="occupation" placeholder="Occupation" type="text" />
 
               <div class="input-container"></div>
             </div>
@@ -517,7 +517,7 @@
           <div class="field-label-parent8">
             <div class="field-label10">Religion | Caste | Samaj</div>
             <div class="frame-parent">
-              <input  class="frame-child" name="religion" id="religion" placeholder="Caste" type="text" />
+              <input class="frame-child" name="religion" id="religion" placeholder="Caste" type="text" />
 
               <div class="input-container"></div>
             </div>
@@ -530,7 +530,7 @@
           <div class="field-label11">Address (Please mention Area)</div>
 
           <div class="frame-parent" style="margin-top: 10px;">
-            <input  class="frame-child" name="address_area" id="address_area" placeholder="Name" type="text" />
+            <input class="frame-child" name="address_area" id="address_area" placeholder="Name" type="text" />
 
             <div class="input-container"></div>
           </div>
@@ -552,7 +552,7 @@
             <div class="select-parent">
               <div class="mann-milaap-digital-container">
                 <span>
-                  <input type="checkbox" id="checkbox1" value="Mann Milaap Digital Group">
+                  <input onclick="showSelection()" type="checkbox" id="checkbox1" value="Mann Milaap Digital Group">
                   <label class="checkbox" for="checkbox1">Mann Milaap Digital Group</label>
                 </span>
               </div>
@@ -561,7 +561,7 @@
               <div class="mann-milaap-apple-group-wrapper">
                 <div class="mann-milaap-apple-container">
                   <span>
-                    <input type="checkbox" id="checkbox2" value="Mann Milaap Apple Group">
+                    <input onclick="showSelection()" type="checkbox" id="checkbox2" value="Mann Milaap Apple Group">
                     <label class="checkbox" for="checkbox2">Mann Milaap Apple Group</label>
                   </span>
                 </div>
@@ -571,7 +571,7 @@
               <div class="mann-milaap-deravasi-container" style="margin-top: 10px;
     margin-bottom: 10px;">
                 <span>
-                  <input type="checkbox" id="checkbox3" value="Mann Milaap Deravasi Group">
+                  <input onclick="showSelection()" type="checkbox" id="checkbox3" value="Mann Milaap Deravasi Group">
                   <label class="checkbox" for="checkbox3">Mann Milaap Deravasi Group</label>
                 </span>
               </div>
@@ -579,7 +579,7 @@
             <div>
               <div class="patanghad-group">
                 <span>
-                  <input type="checkbox" id="checkbox4" value="Patanghad Group">
+                  <input onclick="showSelection()" type="checkbox" id="checkbox4" value="Patanghad Group">
                   <label class="checkbox" for="checkbox4">Patanghad Group</label>
                 </span>
               </div>
@@ -587,7 +587,7 @@
             <div>
               <div class="only-sthanakwasi-group-container">
                 <span>
-                  <input type="checkbox" id="checkbox5" value="Only Sthanakwasi Group (1)">
+                  <input onclick="showSelection()" type="checkbox" id="checkbox5" value="Only Sthanakwasi Group (1)">
                   <label class="checkbox" for="checkbox5">Only Sthanakwasi Group (1)</label>
                 </span>
               </div>
@@ -595,7 +595,7 @@
             <div>
               <div class="only-sthanakwasi-group-container1">
                 <span>
-                  <input type="checkbox" id="checkbox6" value="Only Sthanakwasi Group (2)">
+                  <input onclick="showSelection()" type="checkbox" id="checkbox6" value="Only Sthanakwasi Group (2)">
                   <label class="checkbox" for="checkbox6">Only Sthanakwasi Group (2)</label>
                 </span>
               </div>
@@ -603,19 +603,20 @@
             <div>
               <div class="only-canada-group-container">
                 <span>
-                  <input type="checkbox" id="checkbox7" value="Only Canada Group">
+                  <input onclick="showSelection()" type="checkbox" id="checkbox7" value="Only Canada Group">
                   <label class="checkbox" for="checkbox7">Only Canada Group</label>
                 </span>
               </div>
             </div>
             <div>
-              <input type="checkbox" id="checkbox8" value="H1B Visa Group">
+              <input onclick="showSelection()" type="checkbox" id="checkbox8" value="H1B Visa Group">
               <label class="checkbox" for="checkbox8">H1B Visa Group</label>
             </div>
             <div>
               <div class="nri-group-citizenship">
                 <span>
-                  <input type="checkbox" id="checkbox9" value="  NRI Group (Citizenship and Green Card Holder)">
+                  <input onclick="showSelection()" type="checkbox" id="checkbox9"
+                    value="  NRI Group (Citizenship and Green Card Holder)">
                   <label class="checkbox" for="checkbox9"> NRI Group (Citizenship and Green Card Holder)</label>
                 </span>
               </div>
@@ -624,7 +625,7 @@
             <div class="far-east-group-container" style="margin-top: 10px;
     margin-bottom: 10px;">
               <span>
-                <input type="checkbox" id="checkbox10" value="Far East Group">
+                <input onclick="showSelection()" type="checkbox" id="checkbox10" value="Far East Group">
                 <label class="checkbox" for="checkbox10">Far East Group</label>
               </span>
 
@@ -633,7 +634,8 @@
             <div style="margin-top: 10px;
     margin-bottom: 10px;">
               <span>
-                <input type="checkbox" id="checkbox11" value="  Mann Milaap Height Body Group">
+                <input onclick="showSelection()" type="checkbox" id="checkbox11"
+                  value="  Mann Milaap Height Body Group">
                 <label class="checkbox" for="checkbox11"> Mann Milaap Height Body Group</label>
               </span>
             </div>
@@ -641,35 +643,39 @@
             <div style="margin-top: 10px;
     margin-bottom: 10px;">
               <span>
-                <input type="checkbox" id="checkbox12" value="  Mann Milaap Vaishnav Group (1)">
+                <input onclick="showSelection()" type="checkbox" id="checkbox12"
+                  value="  Mann Milaap Vaishnav Group (1)">
                 <label class="checkbox" for="checkbox12"> Mann Milaap Vaishnav Group (1)</label>
               </span>
             </div>
             <div style="margin-top: 10px;
     margin-bottom: 10px;">
               <span>
-                <input type="checkbox" id="checkbox13" value=" Mann Milaap Vaishnav Group (2)">
+                <input onclick="showSelection()" type="checkbox" id="checkbox13"
+                  value=" Mann Milaap Vaishnav Group (2)">
                 <label class="checkbox" for="checkbox13"> Mann Milaap Vaishnav Group (2)</label>
               </span>
             </div>
             <div style="margin-top: 10px;
     margin-bottom: 10px;">
               <span>
-                <input type="checkbox" id="checkbox14" value="Mann Milaap Triple Financial Group">
+                <input onclick="showSelection()" type="checkbox" id="checkbox14"
+                  value="Mann Milaap Triple Financial Group">
                 <label class="checkbox" for="checkbox14"> Mann Milaap Triple Financial Group</label>
               </span>
             </div>
             <div style="margin-top: 10px;
     margin-bottom: 10px;">
               <span>
-                <input type="checkbox" id="checkbox15" value="Mann Milaap CA & Engineers Group                  ">
+                <input onclick="showSelection()" type="checkbox" id="checkbox15"
+                  value="Mann Milaap CA & Engineers Group                  ">
                 <label class="checkbox" for="checkbox15">Mann Milaap CA & Engineers Group</label>
               </span>
             </div>
             <div style="margin-top: 10px;
     margin-bottom: 10px;">
               <span>
-                <input type="checkbox" id="checkbox16" value="Mann Milaap Only Doctors Group
+                <input onclick="showSelection()" type="checkbox" id="checkbox16" value="Mann Milaap Only Doctors Group
                   ">
                 <label class="checkbox" for="checkbox16">Mann Milaap Only Doctors Group
                 </label>
@@ -679,7 +685,7 @@
             <div style="margin-top: 10px;
     margin-bottom: 10px;">
               <span>
-                <input type="checkbox" id="checkbox17" value="Mann Milaap Divorcee Group
+                <input onclick="showSelection()" type="checkbox" id="checkbox17" value="Mann Milaap Divorcee Group
 ">
                 <label class="checkbox" for="checkbox17">Mann Milaap Divorcee Group
                 </label>
@@ -688,7 +694,7 @@
             <div style="margin-top: 10px;
     margin-bottom: 10px;">
               <span>
-                <input type="checkbox" id="checkbox18" value="Mann Milaap Broken Goldhana Group
+                <input onclick="showSelection()" type="checkbox" id="checkbox18" value="Mann Milaap Broken Goldhana Group
 ">
                 <label class="checkbox" for="checkbox18">Mann Milaap Broken Goldhana Group
                 </label>
@@ -697,7 +703,7 @@
             <div style="margin-top: 10px;
     margin-bottom: 10px;">
               <span>
-                <input type="checkbox" id="checkbox19" value="Mann Milaap UK Europe Group
+                <input onclick="showSelection()" type="checkbox" id="checkbox19" value="Mann Milaap UK Europe Group
 ">
                 <label class="checkbox" for="checkbox19">Mann Milaap UK Europe Group
                 </label>
@@ -706,7 +712,7 @@
             <div style="margin-top: 10px;
     margin-bottom: 10px;">
               <span>
-                <input type="checkbox" id="checkbox20" value="Mann Milaap Handicapped Group
+                <input onclick="showSelection()" type="checkbox" id="checkbox20" value="Mann Milaap Handicapped Group
 ">
                 <label class="checkbox" for="checkbox20">Mann Milaap Handicapped Group
                 </label>
@@ -715,7 +721,7 @@
             <div style="margin-top: 10px;
     margin-bottom: 10px;">
               <span>
-                <input type="checkbox" id="checkbox21" value="Mann Milaap Bigger Age Group
+                <input onclick="showSelection()" type="checkbox" id="checkbox21" value="Mann Milaap Bigger Age Group
 ">
                 <label class="checkbox" for="checkbox21">Mann Milaap Bigger Age Group
                 </label>
@@ -724,7 +730,7 @@
             <div style="margin-top: 10px;
     margin-bottom: 10px;">
               <span>
-                <input type="checkbox" id="checkbox22" value="Mann Milaap 35-65 Group
+                <input onclick="showSelection()" type="checkbox" id="checkbox22" value="Mann Milaap 35-65 Group
 ">
                 <label class="checkbox" for="checkbox22">Mann Milaap 35-65 Group
                 </label>
@@ -733,7 +739,7 @@
             <div style="margin-top: 10px;
     margin-bottom: 10px;">
               <span>
-                <input type="checkbox" id="checkbox23" value="Mann Milaap Biggest Age Group
+                <input onclick="showSelection()" type="checkbox" id="checkbox23" value="Mann Milaap Biggest Age Group
 ">
                 <label class="checkbox" for="checkbox23">Mann Milaap Biggest Age Group
                 </label>
@@ -742,7 +748,7 @@
             <div style="margin-top: 10px;
     margin-bottom: 10px;">
               <span>
-                <input type="checkbox" id="checkbox24" value="Mann Milaap Mangal Group
+                <input onclick="showSelection()" type="checkbox" id="checkbox24" value="Mann Milaap Mangal Group
 ">
                 <label class="checkbox" for="checkbox24">Mann Milaap Mangal Group
                 </label>
@@ -751,7 +757,7 @@
             <div style="margin-top: 10px;
     margin-bottom: 10px;">
               <span>
-                <input type="checkbox" id="checkbox25" value="Mann Milaap Out of Mumbai Group
+                <input onclick="showSelection()" type="checkbox" id="checkbox25" value="Mann Milaap Out of Mumbai Group
 ">
                 <label class="checkbox" for="checkbox25">Mann Milaap Out of Mumbai Group
                 </label>
@@ -760,7 +766,7 @@
             <div style="margin-top: 10px;
     margin-bottom: 10px;">
               <span>
-                <input type="checkbox" id="checkbox26" value="South Mumbai (Worli to Colaba) Grou
+                <input onclick="showSelection()" type="checkbox" id="checkbox26" value="South Mumbai (Worli to Colaba) Grou
 ">
                 <label class="checkbox" for="checkbox26">South Mumbai (Worli to Colaba) Grou
                 </label>
@@ -769,7 +775,7 @@
             <div style="margin-top: 10px;
     margin-bottom: 10px;">
               <span>
-                <input type="checkbox" id="checkbox27" value="Mann Milaap Free Group
+                <input onclick="showSelection()" type="checkbox" id="checkbox27" value="Mann Milaap Free Group
 ">
                 <label class="checkbox" for="checkbox27">Mann Milaap Free Group
                 </label>
@@ -778,7 +784,7 @@
             <div style="margin-top: 10px;
     margin-bottom: 10px;">
               <span>
-                <input type="checkbox" id="checkbox28" value="Mann Milaap Low Education Big Business Group
+                <input onclick="showSelection()" type="checkbox" id="checkbox28" value="Mann Milaap Low Education Big Business Group
 ">
                 <label class="checkbox" for="checkbox28">Mann Milaap Low Education Big Business Group
                 </label>
@@ -787,7 +793,7 @@
             <div style="margin-top: 10px;
     margin-bottom: 10px;">
               <span>
-                <input type="checkbox" id="checkbox29" value="Mann Milaap Medical Group
+                <input onclick="showSelection()" type="checkbox" id="checkbox29" value="Mann Milaap Medical Group
 ">
                 <label class="checkbox" for="checkbox29">Mann Milaap Medical Group
                 </label>
@@ -796,7 +802,7 @@
             <div style="margin-top: 10px;
     margin-bottom: 10px;">
               <span>
-                <input type="checkbox" id="checkbox30" value="Mann Milaap Dharmik Group
+                <input onclick="showSelection()" type="checkbox" id="checkbox30" value="Mann Milaap Dharmik Group
 ">
                 <label class="checkbox" for="checkbox30">Mann Milaap Dharmik Group
                 </label>
@@ -805,7 +811,7 @@
             <div style="margin-top: 10px;
     margin-bottom: 10px;">
               <span>
-                <input type="checkbox" id="checkbox31" value="Mann Milaap Only Surat Grou
+                <input onclick="showSelection()" type="checkbox" id="checkbox31" value="Mann Milaap Only Surat Grou
 ">
                 <label class="checkbox" for="checkbox31">Mann Milaap Only Surat Grou
                 </label>
@@ -815,7 +821,7 @@
         </div>
         </section>
 
-<!-- 
+        <!-- 
         <section class="">
           <div class="bio-data-parent" style="margin-left: 20px;">
             <div class="bio-data">BIO DATA :)</div>
@@ -888,11 +894,36 @@
         </div>
       </footer>
     </div>
+    <input id="result" name="group_membership_list" type="text"
+      style="width: 0px;height: 0px;font-size: 0px;visibility: hidden;">
 
   </form>
 
 </body>
 <script>
+function getFutureDateInFormat(months) {
+  const today = new Date();
+  today.setMonth(today.getMonth() + months); // Add the specified months
+
+  let dd = today.getDate();
+  let mm = today.getMonth() + 1; // January is 0!
+  const yyyy = today.getFullYear();
+
+  if (dd < 10) {
+    dd = '0' + dd;
+  }
+  if (mm < 10) {
+    mm = '0' + mm;
+  }
+
+  return dd + '-' + mm + '-' + yyyy;
+}
+
+const formattedFutureDate = getFutureDateInFormat(3); // Add 3 months
+
+console.log(formattedFutureDate); // Output: dd-mm-yyyy format (e.g., 17-06-2024)
+document.getElementById('expire_date').value=formattedFutureDate;
+
   function showSelection() {
     const checkboxes = document.querySelectorAll('input[type="checkbox"]');
     const selectedOptions = [];
@@ -901,7 +932,8 @@
         selectedOptions.push(checkbox.value);
       }
     });
-    document.getElementById('result').textContent = 'Selected Options: ' + selectedOptions.join(', ');
+    document.getElementById('result').value = selectedOptions.join(', ');
+
   }
 </script>
 <script>

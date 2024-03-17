@@ -26,22 +26,22 @@ app.post('/', (req, res) => {
 
 
 app.post('/sendData', (req, res) => {
-    console.log(req.body)
-    axios.post('http://localhost:3000/customer',req.body)
-    .then(() => {
-        console.log("data sent")
-      })
-      .catch((e) => {
-        console.log("Could not send");
-        console.log(e)
-      });
+    console.log(req.body.group_membership_list)
+    // axios.post('http://localhost:3000/customer',req.body)
+    // .then(() => {
+    //     console.log("data sent")
+    //   })
+    //   .catch((e) => {
+    //     console.log("Could not send");
+    //     console.log(e)
+    //   });
 });
 
 
 
 
 
-const port = process.env.PORT || 1000 // Port we will listen on
+const port = process.env.PORT || 2000 // Port we will listen on
 
 // Function to listen on the port
 app.listen(port, () => console.log(`This app is listening on port ${port}`));
